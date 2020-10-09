@@ -1,4 +1,5 @@
-public interface Pizza{
-  String destription();
-  int cost();
+interface Pizza {
+    String getDescription();
+    int cost();
+    
 }

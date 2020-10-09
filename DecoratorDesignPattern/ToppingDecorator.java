@@ -1,15 +1,21 @@
-abstract class ToppingDecorator implements Pizza{
-  protected Pizza tempPizza;
+abstract class ToppingDecorator implements Pizza {
+  protected Pizza existingPizza;
 
-  public ToppingDecorator(Pizza pizza){
-    tempPizza = pizza;
+  @Override
+  public int cost() {
+    // TODO Auto-generated method stub
+    return 0;
   }
 
-  public String description(){
-    return tempPizza.destription();
+  @Override
+  public String getDescription() {
+    // TODO Auto-generated method stub
+    return null;
   }
 
-  public int cost(){
-    return tempPizza.cost();
+  public ToppingDecorator(Pizza existingPizza) {
+    this.existingPizza = existingPizza;
   }
+
+
 }

@@ -1,21 +1,23 @@
+import java.util.Arrays;
+
 public class PizzaMaker {
-
   public static void main(String[] args) {
-    Pizza bPizza1 = new MozzarellaTopping(new AnchovyTopping(new PepperoniTopping(new ThinCrustPizza())));
+    Pizza p1 = new PepperroniTopping(new BbqChickenTopping(new ThinCrustPizza()));
 
-    System.out.println(bPizza1.destription());
-    System.out.println(bPizza1.cost());
+    Pizza p2 = new VegieLoverTopping(new ThinCrustPizza());
 
-    Pizza bPizza2 = new MozzarellaTopping(new ThinCrustPizza());
-    System.out.println(bPizza2.destription());
-    System.out.println(bPizza2.cost());
+    Pizza p3 = new VegieLoverTopping(new HandTossedPizza());
+
+    Pizza p4 = new BbqChickenTopping(new PepperroniTopping(new HandTossedPizza()));
 
 
+    Arrays.asList(p1, p2, p3, p4).stream().forEach(p-> {
+      System.out.println(p.getDescription());
+      System.out.println(p.cost());
+    });
+    
 
 
 
   }
-  
-
-  
 }

@@ -1,15 +1,15 @@
-public class ThinCrustPizza implements Pizza{
+public class HandTossedPizza implements Pizza{
 
   @Override
   public String getDescription() {
     // TODO Auto-generated method stub
-    return "this is a thin crust Pizza ";
+    return "this is a Handtossed Pizza with ";
   }
 
   @Override
   public int cost() {
     // TODO Auto-generated method stub
-    return 7;
+    return 10;
   }
   
 }
